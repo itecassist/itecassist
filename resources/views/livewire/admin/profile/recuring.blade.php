@@ -4,10 +4,7 @@
         <div class="row">
             <div class="col-md-10">Recuring Invoice</div>
             <div class="col-md-2 text-end">
-                {{-- <a href="#" data-bs-toggle="modal" data-bs-target="#formModal">Create</a> --}}
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                  </button>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#modalForm">Create</a>
             </div>
         </div>
     </div>
@@ -44,24 +41,8 @@
     </div>
     <div class="card-footer"></div>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-{{-- <div class="modal fade" id="formModal" tabindex="-1" wire:ignore.self aria-hidden="true">
+<form wire:submit.prevent="save">
+<div class="modal fade" id="modalForm" tabindex="-1" wire:ignore.self aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -107,5 +88,6 @@
         </div>
       </div>
     </div>
-  </div> --}}
+  </div>
+</form>
 </div>

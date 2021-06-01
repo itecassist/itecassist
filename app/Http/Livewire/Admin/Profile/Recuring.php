@@ -75,7 +75,7 @@ class Recuring extends Component
             }
         }
 
-        $this->dispatchBrowserEvent('modal', ['modal'=>'formModal', 'action'=>'hide']);
+        $this->dispatchBrowserEvent('modal', ['modal'=>'modalForm', 'action'=>'hide']);
     }
 
     public function loadModal($val, $id)
@@ -104,7 +104,7 @@ class Recuring extends Component
                 $this->modal_btn = 'btn-danger';
                 break;
         }
-        $this->dispatchBrowserEvent('modal', ['modal'=>'formModal', 'action'=>'show']);
+        $this->dispatchBrowserEvent('modal', ['modal'=>'modalForm', 'action'=>'show']);
     }
 
     public function loadForm($id)

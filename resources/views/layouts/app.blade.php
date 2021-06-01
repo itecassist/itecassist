@@ -50,7 +50,8 @@
                 @endif
             @endauth
             </ul>
-            <div class="d-flex">
+            @auth
+                <div class="d-flex">
                 <div class="btn-group dropstart">
                 <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ Auth::user()->name }}
@@ -65,6 +66,8 @@
                 </ul>
               </div>
             </div>
+            @endauth
+
 
           </div>
         </div>

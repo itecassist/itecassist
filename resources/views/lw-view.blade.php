@@ -3,7 +3,7 @@
         <div class="card-header">
             <div class="row">
                 <div class="col-md-10"></div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForm">Create</a></div>
             </div>
         </div>
         <div class="card-body">
@@ -30,7 +30,7 @@
             </table>
         </div>
     </div>
-    <div class="modal fade" id="formModal" tabindex="-1" wire:ignore.self>
+    <div class="modal fade" id="modalForm" tabindex="-1" wire:ignore.self>
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
