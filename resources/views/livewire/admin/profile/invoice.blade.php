@@ -1,11 +1,11 @@
 <div>
-    <div class="cardmt-3">
+    <div class="card mt-3">
         <div class="card-header">
             <div class="row">
                 <div class="col-md-10">Invoice</div>
-                <div class="col-md-2"><button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalInvoice">
-  +
-</button></div>
+                <div class="col-md-2 text-end">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalInvoice">Create</a>
+                </div>
             </div>
         </div>
         <div class="card-body">
