@@ -26,6 +26,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['web','auth'], 'prefix'=>'admin'], function () {
     Route::resource('customers', \App\Http\Controllers\Admin\CustomersController::class);
+    Route::prefix('customer')->group(function () {
+        Route::get('profile', [\App\Http\Controllers\Admin\CustomersController::class, 'profile']);
+        Route::get('emails', [\App\Http\Controllers\Admin\CustomersController::class, 'emails']);
+    });
     Route::resource('products', \App\Http\Controllers\Admin\ProductsController::class);
     Route::get('customers/set/{id}', [\App\Http\Controllers\Admin\CustomersController::class, 'set']);
     Route::prefix('profile')->group(function () {

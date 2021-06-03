@@ -11,7 +11,13 @@ class Email extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
-
+    /** Modal */
+    public $action;
+    public $modal_title;
+    public $modal_btn_title;
+    public $modal_btn;
+    /** Model */
+    public $row_id;
     public $customer_id;
     public $email_address;
     public $email_username;
@@ -23,7 +29,11 @@ class Email extends Component
 
     public function mount()
     {
-
+        $this->row_id=0;
+        $this->modal_title = 'Add new record';
+        $this->modal_btn_title = 'Create Record';
+        $this->modal_btn = 'btn-primary';
+        $this->action='add';
     }
 
     public function render()

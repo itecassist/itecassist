@@ -51,7 +51,7 @@ class Info extends Component
         $res = Customer::findOrFail(session()->get('id'));
         $res->update($data);
         $res->save();
-
+        $this->dispatchBrowserEvent('alert', ['type' => 'success',  'message' => 'Record Updated']);
     }
 
     public function render()

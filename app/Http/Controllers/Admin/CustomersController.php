@@ -99,4 +99,13 @@ class CustomersController extends Controller
         session()->put($rec);
         return redirect('admin/profile');
     }
+
+    public function profile()
+    {
+        return view('admin.customers.profile');
+    }
+    public function emails()
+    {
+        return view('admin.customers.emails');
+    }
 }
